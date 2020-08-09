@@ -1,0 +1,4 @@
+pi-bluetooth
+python-raspberry-gpio
+watchdog
+yay
