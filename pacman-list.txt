@@ -39,6 +39,7 @@ raspberrypi-bootloader
 raspberrypi-bootloader-x
 raspberrypi-firmware
 ristretto
+stow
 sudo
 terminus-font
 texinfo
