@@ -2,8 +2,8 @@
 
 pacman-key --init
 pacman-key --populate archlinuxarm
-pacman -Syu
-pacman -S sudo git # uboot-tools (only in AARCH64)
+pacman -Syu --noconfirm
+pacman -S --noconfirm base-devel vim git # uboot-tools (only in AARCH64)
 hostnamectl set-hostname Neverwhere
 usermod -d /home/trekirk -m alarm
 usermod -l trekirk alarm
