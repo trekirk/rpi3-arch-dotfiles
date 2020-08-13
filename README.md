@@ -8,4 +8,4 @@ This are the configuration files to set up Arch Linux ARM in a Raspberry Pi 3B. 
 	for official packages, and
 	`pacman -Qqem > aur-list.txt`
 	for unnoficial, AUR packages
-- The rest of the folders are user-related and they are designed to be used with GNU `stow`. To install them use `stow <folder>`. To "uninstall" the files, use `stow -D <folder>`.
+- The rest of the folders are user-related and they are designed to be used with GNU `stow`. To install them use `stow -t $HOME -S <folder>`. To "uninstall" the files, use `stow -t $HOME -D <folder>`.
