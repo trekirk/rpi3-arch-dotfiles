@@ -1,4 +1,10 @@
+chuck-alsa
+mugshot
+nerd-fonts-complete
+otf-code-new-roman
 pi-bluetooth
+python-catkin_tools
 python-raspberry-gpio
+urxvt-resize-font-git
 watchdog
 yay
