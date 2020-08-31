@@ -39,6 +39,9 @@ PS1='\[$YELLOW\]\u\[$MAGENTA\]@\[$CYAN\]\h \[$BLUE\]\w\[$GREEN\] \$\[$WHITE\] '
 # Some useful aliases #
 #######################
 
+## If you feel playful <3
+alias yeet='rm -rf'
+
 ## Modified commands
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
@@ -57,10 +60,18 @@ alias hist='history | grep'         # requires an argument
 alias openports='ss --all --numeric --processes --ipv4 --ipv6'
 alias pgg='ps -Af | grep'           # requires an argument
 alias ..='cd ..'
+alias list-fonts='fc-list'
+
+## pacman & yay
+alias pacsyu='sudo pacman -Syyu'
+alias pacleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias pacunlock='sudo rm /var/lib/pacman/db.lck'
+alias yaysua='yay -Sua --noconfirm'
+alias yaysyu='yay -Syu --noconfirm'
+alias yaycache='yay -Scc'
 alias list-pacman='pacman -Qqen'
 alias list-aur='pacman -Qqem'
 alias list-update='list-pacman > $HOME/.dotfiles/package_lists/.pacman_list; list-aur > $HOME/.dotfiles/package_lists/.aur_list'
-alias list-fonts='fc-list'
 # Privileged access
 if (( UID != 0 )); then
     alias sudo='sudo '
@@ -130,7 +141,7 @@ shopt -s autocd
 # Line wrap on window resize
 shopt -s checkwinsize
 
-# Enable bash completion
+# Enable bash completion (need to install bash-completion)
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
         . /usr/share/bash-completion/bash_completion
@@ -139,13 +150,4 @@ if ! shopt -oq posix; then
     fi
 fi
 
-export EDITOR=vim
-
-#############
-# ROS Stuff #  
-#############
-
-source /opt/ros/melodic/setup.bash > /dev/null  # Silence annoying "remove" output
-source ~/ros/catkin_ws/devel/setup.bash > /dev/null
-export ROS_WORKSPACE=~/ros/catkin_ws
-export HOSNAME
+neofetch
